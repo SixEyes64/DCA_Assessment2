@@ -17,7 +17,7 @@ formatTemp = '{0:<8}{1:<25}{2:<18}{3:<15}{4:<20}{5:10}{6:<7}'
 def add_data():
     '''Adds entries to database'''
     # Connect python to MS Access using pyodbc
-    conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=\\ebellfile\studenthome$\2022001566\4DCA\Assessments\Assessment 2\2022001566_dca_a2\Assessment2\2022001566_t2.accdb;')
+    conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=C:\Users\2022001566\source\repos\DCA_Assessment2\DCA_Assessment2\2022001566_t2.accdb')
     cursor = conn.cursor()
 
     # Get the input from the entry widgets
@@ -39,7 +39,7 @@ def show_data():
     '''Output all rows in the terminal'''
 
     # Connect python to MS Access using pyodbc
-    conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=\\ebellfile\studenthome$\2022001566\4DCA\Assessments\Assessment 2\2022001566_dca_a2\Assessment2\2022001566_t2.accdb;')
+    conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=C:\Users\2022001566\source\repos\DCA_Assessment2\DCA_Assessment2\2022001566_t2.accdb')
     cursor = conn.cursor()
 
     cursor.execute('select * from MovieList')
